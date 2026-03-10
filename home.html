@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Nerdeste Hunt</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header-banner"></div>
+<div style="text-align: center; margin-bottom: 20px;">
+    <p style="color: var(--text-primary);">Bem-vindo(a), <strong id="user-name-display"></strong>!</p>
+</div>
+
+        <!-- CARDS DE AÇÕES -->
+        <a href="scanner.html" class="card" style="text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="font-size: 50px;">📷</div>
+                <div>
+                    <h3>Escanear QR Code</h3>
+                    <p>Complete um desafio escaneando o QR Code</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="progresso.html" class="card" style="text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="font-size: 50px;">📊</div>
+                <div>
+                    <h3>Meu Progresso</h3>
+                    <p>Veja quantos desafios você já completou</p>
+                </div>
+            </div>
+        </a>
+
+        <!--<a href="desafios.html" class="card" style="text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="font-size: 50px;">🎯</div>
+                <div>
+                    <h3>Ver Desafios</h3>
+                    <p>Lista completa dos 12 desafios</p>
+                </div>
+            </div>
+        </a>-->
+
+        <a href="colecao.html" class="card" style="text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="font-size: 50px;">🃏</div>
+                <div>
+                    <h3>Minha Coleção</h3>
+                    <p>Veja seus cards coletados</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="ranking.html" class="card" style="text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="font-size: 50px;">🏆</div>
+                <div>
+                    <h3>Ranking</h3>
+                    <p>Veja os jogadores mais rápidos</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="sobre-dev.html" class="card" style="text-decoration: none;">
+            <div style="display: flex; align-items: center; gap: 20px;">
+                <div style="font-size: 50px;">👨‍💻</div>
+                <div>
+                    <h3>Conheça o Dev</h3>
+                    <p>Saiba quem criou este jogo!</p>
+                </div>
+            </div>
+        </a>
+
+        <!-- BOTÃO SAIR -->
+        <button onclick="logout()" class="btn btn-danger">
+            <i class="fas fa-sign-out-alt"></i> Sair
+        </button>
+    </div>
+
+    <!-- MENU FIXO INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item active">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="scanner.html" class="nav-item">
+            <i class="fas fa-qrcode"></i>
+            <span>Scanner</span>
+        </a>
+        <a href="progresso.html" class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Progresso</span>
+        </a>
+        <a href="colecao.html" class="nav-item">
+            <i class="fas fa-id-card"></i>
+            <span>Coleção</span>
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <i class="fas fa-trophy"></i>
+            <span>Ranking</span>
+        </a>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script>
+        // Inicializar ao carregar
+        document.addEventListener('DOMContentLoaded', () => {
+            protectPage();
+            
+            const userName = getUserName();
+            document.getElementById('user-name-display').textContent = userName;
+        });
+    </script>
+</body>
+</html>

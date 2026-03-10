@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conheça o Dev - Nerdeste Hunt</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER COM BANNER -->
+        <div class="header" style="padding: 0; background: transparent;">
+            <img src="http://localhost:8080/assets/images/header-banner.png" 
+                 alt="Nerdeste Hunt Banner" 
+                 style="width: 100%; height: auto; display: block; border-radius: 0 0 30px 30px;">
+        </div>
+
+        <!-- IMAGEM DO DESENVOLVEDOR -->
+        <div style="text-align: center; margin-bottom: 30px;">
+            <img src="http://localhost:8080/assets/images/dev-horus.png" 
+                 alt="Horus - Desenvolvedor" 
+                 style="width: 100%; max-width: 400px; height: auto; border-radius: 20px; box-shadow: 0 10px 30px rgba(220, 20, 60, 0.4);">
+        </div>
+
+        <!-- CARD COM TEXTO -->
+        <div class="card fade-in">
+            <h2 style="text-align: center; color: var(--primary); margin-bottom: 20px;">
+                👨‍💻 Conheça o Desenvolvedor
+            </h2>
+            
+            <div style="line-height: 1.8; color: var(--text-primary);">
+                <p style="margin-bottom: 15px;">
+                    Konnichiwa, galera! 🎌<br>
+                    Eu sou o <strong>Luiz Gustavo</strong>, mas pode me chamar de <strong>Horus</strong>!
+                </p>
+
+                <p style="margin-bottom: 15px;">
+                    💻 <strong>Desenvolvedor Júnior | Java Full Stack</strong><br>
+                    🎓 Estudante de Ciência da Computação<br>
+                    ☕ <strong>Stack:</strong> Java, Spring Boot, SQL, JPA, APIs REST
+                </p>
+
+                <h3 style="color: var(--primary); margin-top: 25px; margin-bottom: 15px;">
+                    🎮 Sobre o Projeto:
+                </h3>
+
+                <p style="margin-bottom: 15px;">
+                    O Nerdeste me deu uma missão incrível: criar juntos esse jogo, 
+                    o <strong>Nerdeste Hunt</strong>! E cara, foi <strong>MUITO divertido</strong>! 
+                    Espero que vocês aproveitem cada desafio e colecionem todos os cards! 🃏
+                </p>
+
+                <p style="margin-bottom: 15px;">
+                    Faço parte da <strong>família Nerdeste</strong> com muito orgulho, 
+                    e posso adiantar que <strong>muitas novidades vêm por aí</strong>! 
+                </p>
+
+                <p style="margin-bottom: 15px;">
+                    Muito obrigado por fazer parte dessa experiência!
+                </p>
+
+                <p style="margin-bottom: 25px;">
+                    <strong>Abraços, Horus 🎮</strong>
+                </p>
+
+                <h3 style="color: var(--primary); margin-bottom: 15px;">
+                    📱 Vamos nos conectar?
+                </h3>
+
+                <div style="display: flex; flex-direction: column; gap: 12px;">
+                    <a href="https://instagram.com/horus_lg" 
+                       target="_blank" 
+                       class="btn btn-secondary"
+                       style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fab fa-instagram"></i> Instagram: @horus_lg
+                    </a>
+
+                    <a href="https://github.com/HorusGustavo" 
+                       target="_blank" 
+                       class="btn btn-secondary"
+                       style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fab fa-github"></i> GitHub: HorusGustavo
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/luiz-gustavo-2290a236b/" 
+                       target="_blank" 
+                       class="btn btn-secondary"
+                       style="text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i class="fab fa-linkedin"></i> LinkedIn: Luiz Gustavo
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTÃO VOLTAR -->
+        <a href="home.html" class="btn btn-primary">
+            <i class="fas fa-arrow-left"></i> Voltar para Home
+        </a>
+    </div>
+
+    <!-- MENU FIXO INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="scanner.html" class="nav-item">
+            <i class="fas fa-qrcode"></i>
+            <span>Scanner</span>
+        </a>
+        <a href="progresso.html" class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Progresso</span>
+        </a>
+        <a href="colecao.html" class="nav-item">
+            <i class="fas fa-id-card"></i>
+            <span>Coleção</span>
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <i class="fas fa-trophy"></i>
+            <span>Ranking</span>
+        </a>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script>
+        // Protege a página (só acessa se estiver logado)
+        document.addEventListener('DOMContentLoaded', () => {
+            protectPage();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coleção - Nerdeste Hunt</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🃏 Minha Coleção</h1>
+            <p>Cards coletados: <strong id="colecao-percentual">0%</strong></p>
+        </div>
+
+        <!-- ESTATÍSTICAS -->
+        <div class="card fade-in">
+            <h3>📊 Estatísticas da Coleção</h3>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; margin-top: 15px;">
+                <div style="text-align: center; padding: 15px; background: var(--bg-hover); border-radius: 10px;">
+                    <div style="font-size: 32px; font-weight: bold; color: var(--primary);" id="total-cards">0</div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-top: 5px;">Total de Cards</div>
+                </div>
+                <div style="text-align: center; padding: 15px; background: var(--bg-hover); border-radius: 10px;">
+                    <div style="font-size: 32px; font-weight: bold; color: var(--basico);" id="total-basicos">0</div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-top: 5px;">⭐ Básicos</div>
+                </div>
+                <div style="text-align: center; padding: 15px; background: var(--bg-hover); border-radius: 10px;">
+                    <div style="font-size: 32px; font-weight: bold; color: var(--raro);" id="total-raros">0</div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-top: 5px;">💎 Raros</div>
+                </div>
+                <div style="text-align: center; padding: 15px; background: var(--bg-hover); border-radius: 10px;">
+                    <div style="font-size: 32px; font-weight: bold; color: var(--lendario);" id="total-lendarios">0</div>
+                    <div style="font-size: 12px; color: var(--text-secondary); margin-top: 5px;">👑 Lendários</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- COLEÇÃO DE CARDS -->
+        <div id="colecao-container"></div>
+
+        <!-- BOTÃO VOLTAR -->
+        <a href="home.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <!-- MENU FIXO INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="scanner.html" class="nav-item">
+            <i class="fas fa-qrcode"></i>
+            <span>Scanner</span>
+        </a>
+        <a href="progresso.html" class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Progresso</span>
+        </a>
+        <a href="colecao.html" class="nav-item active">
+            <i class="fas fa-id-card"></i>
+            <span>Coleção</span>
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <i class="fas fa-trophy"></i>
+            <span>Ranking</span>
+        </a>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/colecao.js"></script>
+</body>
+</html>

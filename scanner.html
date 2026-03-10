@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanner - Nerdeste Hunt</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Biblioteca QR Code Scanner -->
+    <script src="https://unpkg.com/html5-qrcode@2.3.8/html5-qrcode.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>📷 Scanner de QR Code</h1>
+            <p>Aponte para o QR Code do desafio</p>
+        </div>
+
+        <!-- ÁREA DO SCANNER -->
+        <div class="card">
+            <div id="qr-reader" style="width: 100%;"></div>
+            
+            <button 
+                id="btn-iniciar-scanner" 
+                onclick="iniciarScanner()" 
+                class="btn btn-primary"
+                style="margin-top: 20px;"
+            >
+                <i class="fas fa-camera"></i> Iniciar Scanner
+            </button>
+            
+            <button 
+                id="btn-parar-scanner" 
+                onclick="pararScanner()" 
+                class="btn btn-danger"
+                style="margin-top: 20px; display: none;"
+            >
+                <i class="fas fa-stop"></i> Parar Scanner
+            </button>
+        </div>
+
+        <!-- RESULTADO DO SCAN -->
+        <div id="scan-result"></div>
+
+        <!-- INSTRUÇÕES -->
+        <div class="card">
+            <h3>📋 Instruções</h3>
+            <p style="line-height: 1.8;">
+                1️⃣ Clique em "Iniciar Scanner"<br>
+                2️⃣ Permita o acesso à câmera<br>
+                3️⃣ Aponte para o QR Code do desafio<br>
+                4️⃣ Aguarde a validação automática
+            </p>
+        </div>
+    </div>
+
+    <!-- MENU FIXO INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="scanner.html" class="nav-item active">
+            <i class="fas fa-qrcode"></i>
+            <span>Scanner</span>
+        </a>
+        <a href="progresso.html" class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Progresso</span>
+        </a>
+        <a href="colecao.html" class="nav-item">
+            <i class="fas fa-id-card"></i>
+            <span>Coleção</span>
+        </a>
+        <a href="ranking.html" class="nav-item">
+            <i class="fas fa-trophy"></i>
+            <span>Ranking</span>
+        </a>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/scanner.js"></script>
+</body>
+</html>

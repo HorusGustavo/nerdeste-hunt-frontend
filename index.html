@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerdeste Hunt - Login</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header-banner"></div>
+
+        <!-- FORMULÁRIO DE LOGIN -->
+        <div id="login-form-container">
+            <div class="card">
+                <h3>Login</h3>
+                
+                <div id="login-message"></div>
+                
+                <form onsubmit="handleLogin(event)">
+                    <div class="input-group">
+                        <label for="login-username">
+                            <i class="fas fa-user"></i> Nome de Usuário
+                        </label>
+                        <input 
+                            type="text" 
+                            id="login-username" 
+                            placeholder="Digite seu nome de usuário"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="login-password">
+                            <i class="fas fa-lock"></i> Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            id="login-password" 
+                            placeholder="Digite sua senha"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-sign-in-alt"></i> Entrar
+                    </button>
+                </form>
+
+                <p style="text-align: center; margin-top: 20px; color: var(--text-secondary);">
+                    Não tem uma conta?
+                    <a href="#" onclick="mostrarRegistro()" style="color: var(--primary); text-decoration: none; font-weight: bold;">
+                        Criar conta
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- FORMULÁRIO DE REGISTRO -->
+        <div id="register-form-container" style="display: none;">
+            <div class="card">
+                <h3>Criar Conta</h3>
+                
+                <div id="register-message"></div>
+                
+                <form onsubmit="handleRegistro(event)">
+                    <div class="input-group">
+                        <label for="register-username">
+                            <i class="fas fa-user"></i> Nome de Usuário
+                        </label>
+                        <input 
+                            type="text" 
+                            id="register-username" 
+                            placeholder="Escolha um nome de usuário"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="register-password">
+                            <i class="fas fa-lock"></i> Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            id="register-password" 
+                            placeholder="Crie uma senha"
+                            required
+                        >
+                    </div>
+
+                    <div class="input-group">
+                        <label for="register-confirm-password">
+                            <i class="fas fa-lock"></i> Confirmar Senha
+                        </label>
+                        <input 
+                            type="password" 
+                            id="register-confirm-password" 
+                            placeholder="Confirme sua senha"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-user-plus"></i> Criar Conta
+                    </button>
+                </form>
+
+                <p style="text-align: center; margin-top: 20px; color: var(--text-secondary);">
+                    Já tem uma conta?
+                    <a href="#" onclick="mostrarLogin()" style="color: var(--primary); text-decoration: none; font-weight: bold;">
+                        Fazer login
+                    </a>
+                </p>
+            </div>
+        </div>
+
+        <!-- INFO DO JOGO -->
+        <div class="card">
+            <h3>Como Jogar?</h3>
+            <p style="line-height: 1.8;">
+                1️⃣ Complete os 12 desafios espalhados pelo evento<br>
+                2️⃣ Escaneie o QR Code em cada local<br>
+                3️⃣ Colecione cards de diferentes raridades<br>
+                4️⃣ Dispute o ranking pelo menor tempo!
+            </p>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>

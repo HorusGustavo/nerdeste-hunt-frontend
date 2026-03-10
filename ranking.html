@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking - Nerdeste Hunt</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🏆 Ranking Global</h1>
+            <p>Jogadores que completaram: <strong id="total-jogadores">0</strong></p>
+        </div>
+
+        <!-- MINHA POSIÇÃO (se completou o jogo) -->
+        <div id="posicao-container" class="card fade-in" style="display: none; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);">
+            <h3 style="color: white;">🎯 Sua Posição</h3>
+            <div style="font-size: 48px; font-weight: bold; color: white; text-align: center; margin: 10px 0;">
+                <span id="minha-posicao">-</span>
+            </div>
+        </div>
+
+        <!-- RANKING TOP 10 -->
+        <div id="ranking-container"></div>
+
+        <!-- BOTÃO VOLTAR -->
+        <a href="home.html" class="btn btn-secondary">
+            <i class="fas fa-arrow-left"></i> Voltar
+        </a>
+    </div>
+
+    <!-- MENU FIXO INFERIOR -->
+    <nav class="bottom-nav">
+        <a href="home.html" class="nav-item">
+            <i class="fas fa-home"></i>
+            <span>Home</span>
+        </a>
+        <a href="scanner.html" class="nav-item">
+            <i class="fas fa-qrcode"></i>
+            <span>Scanner</span>
+        </a>
+        <a href="progresso.html" class="nav-item">
+            <i class="fas fa-chart-line"></i>
+            <span>Progresso</span>
+        </a>
+        <a href="colecao.html" class="nav-item">
+            <i class="fas fa-id-card"></i>
+            <span>Coleção</span>
+        </a>
+        <a href="ranking.html" class="nav-item active">
+            <i class="fas fa-trophy"></i>
+            <span>Ranking</span>
+        </a>
+    </nav>
+
+    <!-- SCRIPTS -->
+    <script src="js/config.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ranking.js"></script>
+</body>
+</html>
