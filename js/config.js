@@ -4,7 +4,7 @@
 
 const CONFIG = {
     // URL da API (MUDA AQUI quando for pra produção!)
-    API_URL: 'http://localhost:8080/api',
+    API_URL: 'https://nerdeste-hunt-backend-production.up.railway.app',
     
     // Nome do jogo
     GAME_NAME: 'Nerdeste Hunt',
