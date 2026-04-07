@@ -2,8 +2,6 @@
 // LÓGICA DA TELA DE COLEÇÃO
 // ========================================
 
-const imageUrl = `\( {API_BASE_URL} \){item.card.imagemUrl}`;
-
 // Carregar e exibir coleção de cards
 async function carregarColecao() {
     try {
