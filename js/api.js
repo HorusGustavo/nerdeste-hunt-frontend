@@ -10,7 +10,7 @@ const API = {
     
     async registrar(userName, senha) {
         try {
-            const response = await fetch(`${CONFIG.API_URL}/auth/registro`, {
+            const response = await fetch(`${CONFIG.API_URL}api/auth/registro`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -32,7 +32,7 @@ const API = {
     
     async login(userName, senha) {
         try {
-            const response = await fetch(`${CONFIG.API_URL}/auth/login`, {
+            const response = await fetch(`${CONFIG.API_URL}api/auth/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -58,7 +58,7 @@ const API = {
     
     async listarDesafios() {
         try {
-            const response = await fetch(`${CONFIG.API_URL}/desafios`);
+            const response = await fetch(`${CONFIG.API_URL}api/desafios`);
             return await response.json();
         } catch (error) {
             console.error('Erro ao listar desafios:', error);
@@ -68,7 +68,7 @@ const API = {
     
     async buscarDesafio(id) {
         try {
-            const response = await fetch(`${CONFIG.API_URL}/desafios/${id}`);
+            const response = await fetch(`${CONFIG.API_URL}api/desafios/${id}`);
             if (response.ok) {
                 return await response.json();
             } else {
@@ -87,7 +87,7 @@ const API = {
     async obterProgresso(jogadorId) {
         try {
             const response = await fetch(
-                `${CONFIG.API_URL}/jogador/progresso?jogadorId=${jogadorId}`
+                `${CONFIG.API_URL}api/jogador/progresso?jogadorId=${jogadorId}`
             );
             return await response.json();
         } catch (error) {
@@ -98,7 +98,7 @@ const API = {
     
     async validarQrCode(jogadorId, desafioId, qrCodeToken) {
         try {
-            const response = await fetch(`${CONFIG.API_URL}/jogador/validar-qr`, {
+            const response = await fetch(`${CONFIG.API_URL}api/jogador/validar-qr`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -120,7 +120,7 @@ const API = {
     async obterColecao(jogadorId) {
         try {
             const response = await fetch(
-                `${CONFIG.API_URL}/jogador/cards?jogadorId=${jogadorId}`
+                `${CONFIG.API_URL}api/jogador/cards?jogadorId=${jogadorId}`
             );
             return await response.json();
         } catch (error) {
@@ -135,7 +135,7 @@ const API = {
     
     async obterTop10() {
         try {
-            const response = await fetch(`${CONFIG.API_URL}/ranking/top10`);
+            const response = await fetch(`${CONFIG.API_URL}api/ranking/top10`);
             return await response.json();
         } catch (error) {
             console.error('Erro ao obter ranking:', error);
@@ -146,7 +146,7 @@ const API = {
     async obterPosicao(jogadorId) {
         try {
             const response = await fetch(
-                `${CONFIG.API_URL}/ranking/posicao?jogadorId=${jogadorId}`
+                `${CONFIG.API_URL}api/ranking/posicao?jogadorId=${jogadorId}`
             );
             if (response.ok) {
                 return await response.json();
