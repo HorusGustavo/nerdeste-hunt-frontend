@@ -33,9 +33,17 @@ async function carregarColecao() {
             const cardElement = document.createElement('div');
             cardElement.className = `collection-card ${raridadeClass} fade-in`;
             
-            let cardHTML = card.imagemUrl 
-                ? `<img src="\( {CONFIG.API_URL} \){card.imagemUrl}" alt="${card.nome}" style="width:100%;max-width:200px;height:auto;border-radius:10px;margin-bottom:15px;">` 
-                : `<div style="font-size:60px;margin-bottom:15px;">${getRaridadeEmoji(card.raridade)}</div>`;
+            let cardHTML = '';
+            
+            if (card.imagemUrl) {
+                const imageUrl = `\( {CONFIG.API_URL} \){card.imagemUrl}`;
+                cardHTML = `
+                    <img src="\( {imageUrl}" alt=" \){card.nome}" 
+                         style="width:100%;max-width:200px;height:auto;border-radius:10px;margin-bottom:15px;">
+                `;
+            } else {
+                cardHTML = `<div style="font-size:60px;margin-bottom:15px;">${raridadeEmoji}</div>`;
+            }
             
             cardHTML += `
                 <h3>${card.nome}</h3>
