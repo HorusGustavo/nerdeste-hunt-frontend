@@ -123,9 +123,28 @@ function mostrarResultadoSucesso(resultado) {
         </div>
         
         <div class="collection-card ${raridadeClass}" style="animation: glow 2s infinite;">
+    `;
+    
+    // 🔥 AQUI ESTÁ A CORREÇÃO (IMAGEM DO CARD)
+    if (resultado.cardLiberado.imagemUrl) {
+        html += `
+            <img src="${resultado.cardLiberado.imagemUrl}" 
+                 alt="${resultado.cardLiberado.nome}" 
+                 style="width: 100%; max-width: 200px; height: auto; border-radius: 10px; margin-bottom: 15px;"
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+            <div style="font-size: 80px; margin-bottom: 15px; display: none;">
+                ${raridadeEmoji}
+            </div>
+        `;
+    } else {
+        html += `
             <div style="font-size: 80px; margin-bottom: 15px;">
                 ${raridadeEmoji}
             </div>
+        `;
+    }
+    
+    html += `
             <h2>Card Liberado!</h2>
             <h3>${resultado.cardLiberado.nome}</h3>
             <span class="badge badge-${raridadeClass}">${resultado.cardLiberado.raridade}</span>
